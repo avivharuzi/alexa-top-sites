@@ -1,0 +1,41 @@
+{
+  "name": "alexa-top-sites",
+  "version": "1.0.0",
+  "description": "alexa top sites project using aws api",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "npm run build && nodemon dist/server.js",
+    "watch": "npm run build && tsc --watch",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avivharuzi/alexa-top-sites"
+  },
+  "author": "“Aviv <“avivharuzi@gmail.com”> (https://www.avivharuzi.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avivharuzi/alexa-top-sites/issues"
+  },
+  "homepage": "https://github.com/avivharuzi/alexa-top-sites#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.0",
+    "@types/express": "^4.16.0",
+    "@types/axios": "^0.14.0",
+    "@types/crypto-js": "^3.1.43",
+    "@types/dotenv": "^4.0.3",
+    "@types/moment": "^2.13.0",
+    "@types/xml2js": "^0.4.3",
+    "nodemon": "^1.17.5",
+    "tsc": "^1.20150623.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "axios": "^0.18.0",
+    "crypto-js": "^3.1.9-1",
+    "moment": "^2.22.2",
+    "xml2js": "^0.4.19"
+  }
+}
