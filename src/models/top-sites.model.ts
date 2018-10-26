@@ -216,7 +216,7 @@ export class TopSites {
     }
 
     public async getTopSites(page: number, countryCode: string, isGlobal: boolean = false): Promise<any> {
-        this.start = page * 100 + 1;
+        this.start = ((page * 100) - 100) + 1;
         this.count = 100;
         this.countryCode = countryCode;
         this.isGlobal = isGlobal;
