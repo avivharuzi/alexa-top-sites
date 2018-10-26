@@ -3,10 +3,13 @@ import * as redis from 'redis';
 export class Redis {
     private static instance: Redis;
     
+    private static readonly HOSTNAME: string = process.env.REDIS_HOSTNAME;
+    private static readonly PORT: number = parseInt(process.env.REDIS_PORT);
+    
     private redisClient: redis.RedisClient;
     
     private constructor() {
-        this.redisClient = redis.createClient();
+        this.redisClient = redis.createClient(Redis.PORT, Redis.HOSTNAME);
         
         this.redisClient.on('error', (err) => {
             console.log(`Error: ${err}`);

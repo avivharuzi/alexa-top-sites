@@ -215,9 +215,9 @@ export class TopSites {
         return this.processResponse(TopSites.RESPONSE_GROUP_NAME_COUNTRY_LIST);
     }
 
-    public async getTopSites(start: number, count: number, countryCode: string, isGlobal: boolean = false): Promise<any> {
-        this.start = start;
-        this.count = count;
+    public async getTopSites(page: number, countryCode: string, isGlobal: boolean = false): Promise<any> {
+        this.start = page * 100 + 1;
+        this.count = 100;
         this.countryCode = countryCode;
         this.isGlobal = isGlobal;
 
