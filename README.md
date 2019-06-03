@@ -1,2 +1,3 @@
-# alexa-top-sites
-alexa top sites project using aws api
+# Alexa Top Sites
+
+Alexa Top Sites project using AWS API.
